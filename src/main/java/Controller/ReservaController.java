@@ -1,14 +1,11 @@
 package Controller;
 
 
-import DTO.ReservaDTO;
+import com.example.MicroService_Reserva.Domian.DTO.ReservaDTO;
 
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import com.example.MicroService_Reserva.Service.ReservaService;
+import com.example.MicroService_Reserva.Persistenc.Service.ReservaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,14 +27,14 @@ public class ReservaController {
 
     @GetMapping
     @Operation(summary = "Obtener todas las reservas", description = "Devuelve la lista de todas las reservas.")
-    public ResponseEntity<List<DTO.ReservaDTO>> getAllReservas() {
+    public ResponseEntity<List<ReservaDTO>> getAllReservas() {
         return ResponseEntity.ok(reservaService.obtenerTodas());
     }
 
     @GetMapping("/{id}")
     @Operation(summary = "Obtener una reserva por ID")
-    public ResponseEntity<DTO.ReservaDTO> getReservaById(@PathVariable String id) {
-        DTO.ReservaDTO reserva = reservaService.obtenerPorId(id);
+    public ResponseEntity<ReservaDTO> getReservaById(@PathVariable String id) {
+        ReservaDTO reserva = reservaService.obtenerPorId(id);
         return reserva != null ? ResponseEntity.ok(reserva) : ResponseEntity.notFound().build();
     }
 

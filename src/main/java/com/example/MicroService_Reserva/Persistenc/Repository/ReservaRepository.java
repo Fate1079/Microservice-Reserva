@@ -1,4 +1,4 @@
-package com.example.MicroService_Reserva.Repository;
+package com.example.MicroService_Reserva.Persistenc.Repository;
 
 
 
@@ -7,7 +7,7 @@ package com.example.MicroService_Reserva.Repository;
 
 
 import org.springframework.stereotype.Repository;
-import DTO.ReservaDTO;
+import com.example.MicroService_Reserva.Domian.DTO.ReservaDTO;
 
 import java.util.ArrayList;
 import java.util.List;

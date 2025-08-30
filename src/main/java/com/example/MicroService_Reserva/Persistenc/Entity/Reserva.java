@@ -1,4 +1,4 @@
-package com.example.MicroService_Reserva.Entity;
+package com.example.MicroService_Reserva.Persistenc.Entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

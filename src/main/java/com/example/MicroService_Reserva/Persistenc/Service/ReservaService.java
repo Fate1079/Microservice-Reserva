@@ -1,7 +1,7 @@
-package com.example.MicroService_Reserva.Service;
+package com.example.MicroService_Reserva.Persistenc.Service;
 
-import DTO.ReservaDTO;
-import com.example.MicroService_Reserva.Repository.ReservaRepository;
+import com.example.MicroService_Reserva.Domian.DTO.ReservaDTO;
+import com.example.MicroService_Reserva.Persistenc.Repository.ReservaRepository;
 import org.springframework.stereotype.Service;
 
 
