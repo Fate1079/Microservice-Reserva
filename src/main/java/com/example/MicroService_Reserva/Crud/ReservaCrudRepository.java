@@ -1,7 +1,7 @@
 package com.example.MicroService_Reserva.Crud;
 
 
-import com.example.MicroService_Reserva.Entity.Reserva;
+import com.example.MicroService_Reserva.Persistenc.Entity.Reserva;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
